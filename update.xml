@@ -11,8 +11,8 @@
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/BKWSU-UK/mod_thoughtoftd/releases/download/v5.0.0/mod_thoughtoftd_v5.0.0.zip</downloadurl>
         </downloads>
-        <sha256>2274e09d83b327129f61979c00f9b0b03e28c4cba3f9221133a5d26c1896b066</sha256>
-        <sha512>a91221de58104b51f18f613b28cf3200f3a7734dd94213dc11a5667bd960e478800dad378d3ccea2b8e80f0dc7b4974b1c65ceaf12c8b3fca3c1b7aba50e5c7b</sha512>
+        <sha256>c73a219a6bf5874694bf2cd3d906a75ff7ab226628397bfed449328ae8d7955c</sha256>
+        <sha512>b81ead13cdfeb3cbac652777ea5f090e3eec54dd412d224c7acce12e94eb2c47efe3bb47fd36417d7aafac7acb28da54a0860b58291bf4ede0cfd59df01bd3fb</sha512>
         <tags>
             <tag>stable</tag>
         </tags>
