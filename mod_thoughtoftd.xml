@@ -76,6 +76,6 @@
 		</fields>
 	</config>
     <updateservers>
-      <server type="extension" priority="1" name="Thought for Today Module">https://updates.bkwsu.eu/joomla/mod_thoughtoftd.xml</server>
+      <server type="extension" priority="1" name="Thought for Today Module">https://raw.githubusercontent.com/BKWSU-UK/mod_thoughtoftd/main/update.xml</server>
     </updateservers>
 </extension>

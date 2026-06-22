@@ -1,0 +1,67 @@
+name: CI
+
+# Validates the module on every pull request and on pushes to the main branches,
+# so packaging or syntax breakage is caught before a release is tagged.
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ['8.1', '8.2', '8.3']
+    name: Validate (PHP ${{ matrix.php-version }})
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+
+      - name: Lint PHP
+        run: |
+          for f in mod_thoughtoftd.php Helper/ThoughtoftdHelper.php tmpl/*.php; do
+            php -l "$f"
+          done
+
+      - name: Validate XML manifest
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils
+          xmllint --noout mod_thoughtoftd.xml
+
+      - name: Validate language INI files
+        run: |
+          status=0
+          for f in language/*/*.ini; do
+            if php -r 'exit(parse_ini_file($argv[1]) === false ? 1 : 0);' "$f"; then
+              echo "OK   $f"
+            else
+              echo "FAIL $f"
+              status=1
+            fi
+          done
+          exit $status
+
+      - name: Build package
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mod_thoughtoftd-php${{ matrix.php-version }}
+          path: mod_thoughtoftd_v*.zip
+          if-no-files-found: error
