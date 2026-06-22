@@ -1,0 +1,28 @@
+# Build artefacts
+build/
+mod_thoughtoftd_v*.zip
+*.zip
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Node modules (if ever used)
+node_modules/
+
+# Composer (if ever used)
+vendor/
+

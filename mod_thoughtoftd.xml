@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="5.0" client="site" method="upgrade">
+	<name>MOD_THOUGHTOFTD</name>
+	<creationDate>17.02.2013</creationDate>
+	<author>Yury Boitsov, Andrey Deltsov, Allan Schweitz</author>
+	<version>5.0.0</version>
+	<description>MOD_THOUGHTOFTD_XML_DESCRIPTION</description>
+    <namespace>Joomla\Module\Thoughtoftd</namespace>
+	<files>
+		<filename module="mod_thoughtoftd">mod_thoughtoftd.php</filename>
+		<filename>mod_thoughtoftd.xml</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+        <folder>Helper</folder>
+	</files>
+    <media destination="mod_thoughtoftd" folder="media">
+      <folder>js</folder>
+      <folder>css</folder>
+    </media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="orgids" type="text" default="2" label="MOD_THOUGHTOFTD_ORGIDS_LABEL" description="MOD_THOUGHTOFTD_ORGIDS_DESC"/>
+				<field name="lang" type="text" default="en" label="MOD_THOUGHTOFTD_LANG_LABEL" description="MOD_THOUGHTOFTD_LANG_DESC" />
+				<field name="specificday" type="radio" default="false" class="btn-group" label="MOD_THOUGHTOFTD_DAY_LABEL" description="MOD_THOUGHTOFTD_DAY_DESC">
+						<option value="false">JNO</option>
+						<option value="true">JYES</option>
+				</field>
+			    <field name="show_topic" type="radio" default="0" class="btn-group" label="MOD_THOUGHTOFTD_SHOWTOPIC_LABEL" description="MOD_THOUGHTOFTD_SHOWTOPIC_DESC">
+                        <option value="0">JHIDE</option>
+                        <option value="1">JSHOW</option>
+                </field>
+				<field name="defaultmsg" type="text" default="MOD_THOUGHTOFTD_DEFAULTMSG_VALUE" label="MOD_THOUGHTOFTD_DEFAULTMSG_LABEL" description="MOD_THOUGHTOFTD_DEFAULTMSG_DESC" />
+				<field name="base_url" type="url" default="https://thoughts.brahmakumaris.org/" label="MOD_THOUGHTOFTD_URL" description="MOD_THOUGHTOFTD_URL_DESC" />
+                <field name="read_more" type="radio" default="0" class="btn-group" label="MOD_THOUGHTOFTD_READMORE_LABEL" description="MOD_THOUGHTOFTD_READMORE_DESC">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                </field>
+                <field name="collapsed_height" type="text" default="120" label="MOD_THOUGHTOFTD_COLLAPSED_HEIGHT_LABEL" description="MOD_THOUGHTOFTD_COLLAPSED_HEIGHT_DESC" />
+				<field name="show_button" type="radio" default="0" class="btn-group" label="MOD_THOUGHTOFTD_SHOWBUTTON_LABEL" description="MOD_THOUGHTOFTD_SHOWBUTTON_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field name="subscribetitle" type="text" default="Subscribe" label="MOD_THOUGHTOFTD_SUBSCRIBE_TITLE" description="MOD_THOUGHTOFTD_SUBSCRIBE_TITLE_DESC" />
+				<field name="subscribelink" type="text" default="" label="MOD_THOUGHTOFTD_SUBSCRIBE_LINK" description="MOD_THOUGHTOFTD_SUBSCRIBE_LINK_DESC" />
+				<field name="show_image" type="list" default="none" label="MOD_THOUGHTOFTD_SHOWIMAGE_LABEL" description="MOD_THOUGHTOFTD_SHOWIMAGE_DESC">
+						<option value="none">JNONE</option>
+						<option value="random">MOD_THOUGHTOFTD_RANDOM</option>
+						<option value="static">MOD_THOUGHTOFTD_STATIC</option>
+						<option value="database">MOD_THOUGHTOFTD_DATABASE</option>
+				</field>
+				<field name="type" type="text" default="jpg" label="MOD_THOUGHTOFTD_IMAGE_TYPE_LABEL" description="MOD_THOUGHTOFTD_IMAGE_TYPE_DESC" />
+                <field name="folder" type="text" label="MOD_THOUGHTOFTD_IMAGE_FOLDER_LABEL" description="MOD_THOUGHTOFTD_IMAGE_FOLDER_DESC" />
+<!-- 				<field name="link_from_database" type="radio" default="false" label="MOD_THOUGHTOFTD_IMG_LINK_LABEL" description="MOD_THOUGHTOFTD_IMG_LINK_DESC">
+						<option value="false">JNO</option>
+						<option value="true">JYES</option>
+				</field> -->
+				<field name="default_img_link" type="media" preview="tooltip" directory="" label="MOD_THOUGHTOFTD_DEFAULT_IMG_LINK_LABEL" description="MOD_THOUGHTOFTD_DEFAULT_IMG_LINK_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="debug" type="radio" default="0" class="btn-group btn-group-yesno" label="MOD_THOUGHTOFTD_DEBUG_LABEL" description="MOD_THOUGHTOFTD_DEBUG_DESC">
+						<option value="0">JNO</option>
+						<option value="1">JYES</option>
+				</field>
+				<field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" class="btn-group" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="itemid">
+					<option value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+    <updateservers>
+      <server type="extension" priority="1" name="Thought for Today Module">https://updates.bkwsu.eu/joomla/mod_thoughtoftd.xml</server>
+    </updateservers>
+</extension>
