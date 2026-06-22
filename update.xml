@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+    <update>
+        <name>MOD_THOUGHTOFTD</name>
+        <description>Thought of The day module retrieves and shows a 'Thought of the Day'</description>
+        <element>mod_thoughtoftd</element>
+        <type>module</type>
+        <client>site</client>
+        <version>5.0.0</version>
+        <infourl title="Thought for Today">https://github.com/BKWSU-UK/mod_thoughtoftd</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/BKWSU-UK/mod_thoughtoftd/releases/download/v5.0.0/mod_thoughtoftd_v5.0.0.zip</downloadurl>
+        </downloads>
+        <sha256>2274e09d83b327129f61979c00f9b0b03e28c4cba3f9221133a5d26c1896b066</sha256>
+        <sha512>a91221de58104b51f18f613b28cf3200f3a7734dd94213dc11a5667bd960e478800dad378d3ccea2b8e80f0dc7b4974b1c65ceaf12c8b3fca3c1b7aba50e5c7b</sha512>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <maintainer>BKWSU UK</maintainer>
+        <maintainerurl>https://github.com/BKWSU-UK</maintainerurl>
+        <targetplatform name="joomla" version="(4|5|6)\.[0-9]+"/>
+        <php_minimum>8.1</php_minimum>
+    </update>
+</updates>
