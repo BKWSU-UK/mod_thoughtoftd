@@ -6,13 +6,13 @@
         <element>mod_thoughtoftd</element>
         <type>module</type>
         <client>site</client>
-        <version>5.0.0</version>
+        <version>5.0.1</version>
         <infourl title="Thought for Today">https://github.com/BKWSU-UK/mod_thoughtoftd</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/BKWSU-UK/mod_thoughtoftd/releases/download/v5.0.0/mod_thoughtoftd_v5.0.0.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/BKWSU-UK/mod_thoughtoftd/releases/download/v5.0.1/mod_thoughtoftd_v5.0.1.zip</downloadurl>
         </downloads>
-        <sha256>c73a219a6bf5874694bf2cd3d906a75ff7ab226628397bfed449328ae8d7955c</sha256>
-        <sha512>b81ead13cdfeb3cbac652777ea5f090e3eec54dd412d224c7acce12e94eb2c47efe3bb47fd36417d7aafac7acb28da54a0860b58291bf4ede0cfd59df01bd3fb</sha512>
+        <sha256>c1434d858b858519d36517e6b7bdc2f5bfdbbd7e941d5f3dc4d246ebe1475c63</sha256>
+        <sha512>ca347262dd2a6a06f7db384f4bc5b11b22046fabd33e646e4c7713fe7f4362ad4fcfa81631ffe633d21d7c98d7f2bbf51ab74d9c0b625f23e52139f764c66451</sha512>
         <tags>
             <tag>stable</tag>
         </tags>
