@@ -15,7 +15,7 @@ if (ThoughtoftdHelper::isValidResponse($answ)) {
     $msgtext      = isset($answ->text) ? $answ->text : '';
     $topicid      = isset($answ->topic) ? $answ->topic : '';
 } else {
-    $msgtext = $params->get('defaultmsg', '');
+    $msgtext = ThoughtoftdHelper::getDefaultMessage($params);
 }
 
 $thoughtClass   = 'card-text';

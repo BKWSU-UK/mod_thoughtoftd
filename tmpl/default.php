@@ -23,7 +23,7 @@ if (ThoughtoftdHelper::isValidResponse($answ)) {
         echo '<h4>' . htmlspecialchars($topicid) . '</h4>';
     }
 } else {
-    $msgtext = $params->get('defaultmsg', '');
+    $msgtext = ThoughtoftdHelper::getDefaultMessage($params);
 }
 
 if (!empty($msgtext)) {

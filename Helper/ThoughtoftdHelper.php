@@ -155,6 +155,26 @@ class ThoughtoftdHelper
 	 *
 	 * @return  string
 	 */
+	/**
+	 * Resolves the fallback message shown when no thought is retrieved.
+	 *
+	 * The manifest seeds the field with the language key
+	 * MOD_THOUGHTOFTD_DEFAULTMSG_VALUE because Joomla does not translate a
+	 * field's `default` attribute, so the stored value may be that raw key.
+	 * Running it through Text::_ resolves the key while leaving any custom
+	 * message the user typed untouched.
+	 *
+	 * @param   \Joomla\Registry\Registry  $params  module parameters
+	 *
+	 * @return  string
+	 */
+	public static function getDefaultMessage($params)
+	{
+	    $defaultmsg = $params->get('defaultmsg', '');
+
+	    return $defaultmsg === '' ? '' : Text::_($defaultmsg);
+	}
+
 	public static function getReadMoreAttributes($collapsedHeight)
 	{
 	    return ' data-collapsed-height="' . (int) $collapsedHeight . '"'
