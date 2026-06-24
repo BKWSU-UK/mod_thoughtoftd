@@ -3,7 +3,7 @@
 	<name>MOD_THOUGHTOFTD</name>
 	<creationDate>17.02.2013</creationDate>
 	<author>Yury Boitsov, Andrey Deltsov, Allan Schweitz</author>
-	<version>5.0.0</version>
+	<version>5.0.1</version>
 	<description>MOD_THOUGHTOFTD_XML_DESCRIPTION</description>
     <namespace>Joomla\Module\Thoughtoftd</namespace>
 	<files>
